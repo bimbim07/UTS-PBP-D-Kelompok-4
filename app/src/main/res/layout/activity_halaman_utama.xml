@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HalamanUtama">
+
+    <ImageView
+        android:id="@+id/ImgLogo2"
+        android:layout_width="167dp"
+        android:layout_height="118dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:src="@drawable/hotel" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/hotelKota"
+        android:layout_below="@+id/ImgLogo2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kota, Tujuan, atau Nama Hotel"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"/>
+        
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerDestinasi"
+            android:entries="@array/spinnerkota"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/hotelchekin"
+        android:layout_below="@+id/hotelKota">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check-in"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tanggalCheckin"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:drawableLeft="@drawable/ic_baseline_date_range_24"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/durasi"
+        android:layout_below="@+id/hotelchekin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Durasi"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerWaktu"
+            android:entries="@array/spinnerDurasi"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/hotelchekout"
+        android:layout_below="@+id/durasi">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check-out"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tanggalCheckout"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:drawableLeft="@drawable/ic_baseline_date_range_24"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/hotelTamu"
+        android:layout_below="@+id/hotelchekout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Kamar"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerMenginap"
+            android:entries="@array/spinnerTamu"/>
+
+
+    </LinearLayout>
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnHotel"
+            android:layout_below="@+id/hotelTamu"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#fff"
+            android:background="#E65100"
+            android:text="Cari Hotel"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"/>
+</RelativeLayout>
